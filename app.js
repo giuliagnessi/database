@@ -15,15 +15,16 @@ const query = async (query) => {
     }
   }
 
-  const sql = postgres({
+const sql = postgres({
     max: 2,
     max_lifetime: 10,
-    host: database.cs.aalto.fi,
+    host: "database.cs.aalto.fi",
     port: process.env.PGPORT,
-    database: dba3d77cbd3fbd4e,
-    username: dba3d77cbd3fbd4e,
-    password: db9b768541288b4a,
-  });
+    database: "dba3d77cbd3fbd4e",
+    username: "dba3d77cbd3fbd4e",
+    password: "db9b768541288b4a",
+});
+
   
   return await sql.unsafe(query);
 };
