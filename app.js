@@ -18,11 +18,11 @@ const query = async (query) => {
   const sql = postgres({
     max: 2,
     max_lifetime: 10,
-    host: process.env.PGHOST,
+    host: database.cs.aalto.fi,
     port: process.env.PGPORT,
-    database: process.env.PGDATABASE,
-    username: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
+    database: dba3d77cbd3fbd4e,
+    username: dba3d77cbd3fbd4e,
+    password: db9b768541288b4a,
   });
   
   return await sql.unsafe(query);
